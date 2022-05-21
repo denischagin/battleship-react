@@ -1,38 +1,124 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+span {
+  font-size: 20px;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.field {
+  display: flex;
+}
+
+.wrap {
+  display:block;
+}
+
+.player {
+  margin-bottom: 20px;
+
+}
+
+.board {
+  width: calc(50px*10);
+  height: calc(50px*10);
+  display: flex;
+  flex-wrap: wrap;
+  outline:1px solid rgb(35, 5, 59);
+  box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.443);
+
+
+}
+
+.cell {
+  outline:1px solid rgb(35, 5, 59);
+  outline-offset: -1px;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background: rgb(223, 215, 255)
+}
+
+.side-panel {
+  display: flexbox;
+  width: 230px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background: white;
+}
+
+
+.ship {
+  max-width: 100%;
+  display: block;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: rgb(194, 208, 255);
+  font-weight:bolder;
+  width: 150px;
+}
+
+.ship:hover {
+  background: rgb(158, 155, 191);
+}
+
+.up-panel {
+  display: flex;
+  width: 250px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.up-panel button {
+  margin-top: 8px;
+  margin-right: 10px;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 10px;
+  border: 0px;
+  background-color: rgb(209, 194, 255);
+  font-weight:bolder;
+}
+
+.up-panel button:hover {
+  background: rgb(158, 155, 191);
+}
+
+.low-panel {
+  display: block;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
